@@ -1,0 +1,78 @@
+﻿.mGrid { 
+    width: 100%; 
+    background-color: #fff; 
+    margin: 5px 0 10px 0; 
+   /* border: solid 1px #525252;*/
+   border-left: solid 1px #f6f6f6; border-bottom: solid 1px #f6f6f6; 
+    border-collapse:collapse; 
+    
+}
+.mGrid td { 
+    padding: 2px; 
+    /*border: solid 1px #c1c1c1;*/ 
+    border-left: solid 1px #f6f6f6; border-bottom: solid 1px #f6f6f6; 
+    color: #717171; 
+}
+
+.mGrid th { 
+    padding: 4px 2px; height:20px;
+    color: #fff;   border-left: solid 1px #1A4980; 
+    font-size: 0.9em; 
+            background-image: linear-gradient(bottom, rgb(23,70,125) 7%, rgb(96,143,204) 62%);
+background-image: -o-linear-gradient(bottom, rgb(23,70,125) 7%, rgb(96,143,204) 62%);
+background-image: -moz-linear-gradient(bottom, rgb(23,70,125) 7%, rgb(96,143,204) 62%);
+background-image: -webkit-linear-gradient(bottom, rgb(23,70,125) 7%, rgb(96,143,204) 62%);
+background-image: -ms-linear-gradient(bottom, rgb(23,70,125) 7%, rgb(96,143,204) 62%);
+
+background-image: -webkit-gradient(
+	linear,
+	left bottom,
+	left top,
+	color-stop(0.07, rgb(23,70,125)),
+	color-stop(0.62, rgb(96,143,204))
+)
+  
+}
+.mGrid .alt { background: #D7FDFD  repeat-x top; border-top: solid 0px #7EFAFA;border-left: solid 1px #f6f6f6;}
+.mGrid .pgr { background: #424242 url(grd_pgr.png) repeat-x top; }
+
+.mGrid .pgr a {  text-decoration: none; }
+.mGrid .pgr a:hover { color: #000; text-decoration: none; }
+
+   
+   .grid-view
+{
+   padding: 0;
+   margin: 0;
+   border: 1px solid #333;
+   font-family: "Verdana, Arial, Helvetica, sans-serif, Trebuchet MS";
+   font-size: 0.9em;
+}
+
+.grid-view tr.header
+{
+   color: white;
+   background-color: #FF5600;
+   height: 25px;
+   vertical-align: middle;
+   text-align: center;
+   font-weight: bold;
+}
+
+.grid-view tr.normal
+{
+   color: black;
+   background-color: #FDC64E;
+   height: 25px;
+   vertical-align: middle;
+   text-align: center;
+}
+
+.grid-view tr.alternate
+{
+   color: black;
+   background-color: #D59200;
+   height: 25px;
+   vertical-align: middle;
+   text-align: center;
+}

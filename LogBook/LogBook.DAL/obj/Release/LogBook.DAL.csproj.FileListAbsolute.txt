@@ -1,0 +1,12 @@
+C:\LogBook\LogBook\LogBook.DAL\bin\Release\LogBook.DAL.exe.config
+C:\LogBook\LogBook\LogBook.DAL\bin\Release\LogBook.DAL.exe
+C:\LogBook\LogBook\LogBook.DAL\bin\Release\LogBook.DAL.pdb
+C:\LogBook\LogBook\LogBook.DAL\obj\Release\ResolveAssemblyReference.cache
+C:\LogBook\LogBook\LogBook.DAL\obj\Release\LogBook.DAL.exe
+C:\LogBook\LogBook\LogBook.DAL\obj\Release\LogBook.DAL.pdb
+C:\Users\MediQlogix Solutions\Downloads\LogBook\LogBook\LogBook.DAL\bin\Release\LogBook.DAL.exe.config
+C:\Users\MediQlogix Solutions\Downloads\LogBook\LogBook\LogBook.DAL\bin\Release\LogBook.DAL.exe
+C:\Users\MediQlogix Solutions\Downloads\LogBook\LogBook\LogBook.DAL\bin\Release\LogBook.DAL.pdb
+C:\Users\MediQlogix Solutions\Downloads\LogBook\LogBook\LogBook.DAL\obj\Release\ResolveAssemblyReference.cache
+C:\Users\MediQlogix Solutions\Downloads\LogBook\LogBook\LogBook.DAL\obj\Release\LogBook.DAL.exe
+C:\Users\MediQlogix Solutions\Downloads\LogBook\LogBook\LogBook.DAL\obj\Release\LogBook.DAL.pdb

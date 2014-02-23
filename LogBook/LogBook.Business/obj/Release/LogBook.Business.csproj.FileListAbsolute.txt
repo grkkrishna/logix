@@ -1,0 +1,14 @@
+C:\LogBook\LogBook\LogBook.Business\obj\Release\ResolveAssemblyReference.cache
+C:\LogBook\LogBook\LogBook.Business\bin\Release\LogBook.Business.exe
+C:\LogBook\LogBook\LogBook.Business\bin\Release\LogBook.Business.pdb
+C:\LogBook\LogBook\LogBook.Business\bin\Release\LogBook.DAL.exe
+C:\LogBook\LogBook\LogBook.Business\bin\Release\LogBook.DAL.pdb
+C:\LogBook\LogBook\LogBook.Business\obj\Release\LogBook.Business.exe
+C:\LogBook\LogBook\LogBook.Business\obj\Release\LogBook.Business.pdb
+C:\Users\MediQlogix Solutions\Downloads\LogBook\LogBook\LogBook.Business\obj\Release\ResolveAssemblyReference.cache
+C:\Users\MediQlogix Solutions\Downloads\LogBook\LogBook\LogBook.Business\obj\Release\LogBook.Business.exe
+C:\Users\MediQlogix Solutions\Downloads\LogBook\LogBook\LogBook.Business\bin\Release\LogBook.Business.exe
+C:\Users\MediQlogix Solutions\Downloads\LogBook\LogBook\LogBook.Business\bin\Release\LogBook.Business.pdb
+C:\Users\MediQlogix Solutions\Downloads\LogBook\LogBook\LogBook.Business\bin\Release\LogBook.DAL.exe
+C:\Users\MediQlogix Solutions\Downloads\LogBook\LogBook\LogBook.Business\bin\Release\LogBook.DAL.pdb
+C:\Users\MediQlogix Solutions\Downloads\LogBook\LogBook\LogBook.Business\obj\Release\LogBook.Business.pdb

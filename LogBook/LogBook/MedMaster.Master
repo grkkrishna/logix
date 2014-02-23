@@ -1,0 +1,200 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MedMaster.Master.cs" Inherits="MedCis.UI.MedMaster" %>
+
+
+<%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="asp" %>
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+     <link href="Styles/mqx.css" rel="stylesheet" type="text/css" />
+     <link href="Styles/nav.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="Styles/mGrid.css" rel="stylesheet" type="text/css" />
+     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Squada One"/>
+     <link rel="shortcut icon" href="images/favicon.ico" />
+
+<style type="text/css">
+      
+        .style300
+        {
+            font-family: 'Squada One', 'cursive';
+            font-size: 20px;
+            color: #0096A4;
+            
+        }
+        .style301
+        {
+            font-family: 'Squada One', 'cursive';
+            font-size: 20px;
+            color: #CC6600;
+            
+        }
+#updBackground 
+{
+    position:fixed;
+    top:0px;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    background-color:Gray;
+    filter:alpha(opacity=40);
+    opacity:0.4;
+}
+
+#updProgress 
+{
+    position:fixed;
+    top:10%;
+    left:10px;
+    width:300px;
+    height:50px;
+    text-align:center;
+    background-color:White;
+    border:solid 3px black;
+        }
+        
+    </style>
+   
+</head>
+<body>
+<form id="form1" runat="server">
+
+
+
+
+
+<div>
+    
+
+
+
+
+
+  <table id="Page"  align="center"  style="background-color:White; vertical-align:top;" width="1020">
+                <tr style="height:1px;background-color:#0096A4;" class="trHead" >
+                <td style="vertical-align:middle;">
+                <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td rowspan="2" width="20%">
+                                <asp:Image ID="Image1" runat="server" ImageUrl="~/images/logo1.png" />
+                            </td>
+                            <td width="80%" align="right">
+                                <asp:LoginView ID="LoginView1" runat="server">
+                                    <LoggedInTemplate>
+                                        <asp:Label ID="lblLogin" runat="server" Font-Size="11px" ForeColor="White" 
+                                            Text=""></asp:Label>
+                                       &nbsp;&nbsp;
+                                    </LoggedInTemplate>
+                                </asp:LoginView>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right">
+                                <asp:HyperLink ID="HyperLink1" runat="server" ForeColor="White" 
+                        NavigateUrl="~/Admin_General/ChangePassword.aspx">Change Password&nbsp;&nbsp;&nbsp;</asp:HyperLink></td>
+                        </tr>
+                    </table>
+                </td>
+                </tr>
+                 <tr style="height:1px; vertical-align:top;" >
+                    <td  valign="top">
+                            
+                         <ul id="menu-bar">
+                                        <li  title="Home"><a href="../home.aspx">Home</a>
+                                                             
+                                            </li>
+                                            <li  title="Home"><a href="../user_master.aspx">User Master</a>
+                                                             
+                                            </li>
+                                            <li  title="Home"><a href="../department_master.aspx">Department Master</a>
+                                                             
+                                            </li>
+                                            <li  title="Home"><a href="../instrument_master.aspx">Instrument</a>
+                                                             
+                                            </li>
+                                             <li  title="Home"><a href="../machine_log.aspx">Instrument Log</a>
+                                                             
+                                            </li>
+                                             <li  title="Home"><a href="../centrifuge_log.aspx">Centrifuge Log</a>
+                                                             
+                                            </li>
+                                           <%-- <asp:Repeater runat="server" ID="repMainMenu" OnItemDataBound="repMainMenu_ItemDataBound">
+                                                <ItemTemplate>
+                                                    <li>
+                                                        <asp:HyperLink ID="HyperLink1" runat="server" Text='<%#  Eval("title") %>' NavigateUrl='<%#  Eval("url") %>'></asp:HyperLink>
+                                                        <asp:Label ID="lblMenuId" runat="server" Text='<%#  Eval("id") %>' Visible="false"></asp:Label>
+                                                        <ul>
+                                                            <asp:Repeater runat="server" ID="repDetail">
+                                                                <ItemTemplate>
+                                                                    <li><a href='<%#  Eval("url") %>'>
+                                                                        <%#  Eval("title") %></a></li>
+                                                                </ItemTemplate>
+                                                               </asp:Repeater>
+                                                        </ul>
+                                                        </li>
+                                                </ItemTemplate>
+                                            </asp:Repeater>--%>
+                                            
+                                                    
+                                                  
+                                                    
+                                          
+                                 
+                                            <li title="Logout"><a href="../Signout.aspx">Logout</a>
+                                                             
+                                            </li>
+                                            
+                                        </ul>
+                        
+                                       
+                                    
+                    </td>
+                </tr>
+                <tr style="height:1px; vertical-align:top;" >
+                  <td> 
+                        <asp:ContentPlaceHolder ID="contentPlaceholderHeading" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+                 <tr style="height:100%;vertical-align:top;overflow:auto">
+                    <td  style="border-top:#E2E2E2;border-top-style:solid; border-top-width:1px" 
+                        valign="top";>
+                        <%--<table width="100%" >
+                            <tr >
+                                <td >     --%>                       
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder_Main" runat="server">
+                                     
+                        </asp:ContentPlaceHolder>
+                       <%-- </td>
+                           </tr>
+                            </table>--%>
+                    </td>
+                </tr>
+                <tr  >
+                    <td>
+                  
+                    </td>
+                </tr>
+            </table>
+
+      
+       </div>
+
+            
+
+       
+       
+       
+       
+       
+       
+
+    
+    </form>
+    
+</body>
+</html>

@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogBook.UI", "LogBook\LogBook.UI.csproj", "{9320CF95-EDE9-498F-8E6C-B144A4D17375}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogBook.Business", "LogBook.Business\LogBook.Business.csproj", "{42451ADE-86A3-4E52-AAA3-BBB1F9F565DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogBook.DAL", "LogBook.DAL\LogBook.DAL.csproj", "{836E76E8-9F6E-450A-99BD-68BD7A168F0B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9320CF95-EDE9-498F-8E6C-B144A4D17375}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9320CF95-EDE9-498F-8E6C-B144A4D17375}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9320CF95-EDE9-498F-8E6C-B144A4D17375}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9320CF95-EDE9-498F-8E6C-B144A4D17375}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42451ADE-86A3-4E52-AAA3-BBB1F9F565DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42451ADE-86A3-4E52-AAA3-BBB1F9F565DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42451ADE-86A3-4E52-AAA3-BBB1F9F565DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42451ADE-86A3-4E52-AAA3-BBB1F9F565DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{836E76E8-9F6E-450A-99BD-68BD7A168F0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{836E76E8-9F6E-450A-99BD-68BD7A168F0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{836E76E8-9F6E-450A-99BD-68BD7A168F0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{836E76E8-9F6E-450A-99BD-68BD7A168F0B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
