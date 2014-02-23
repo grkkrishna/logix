@@ -1,0 +1,19 @@
+C:\LogBook\LogBook\LogBook\obj\Release\ResolveAssemblyReference.cache
+C:\LogBook\LogBook\LogBook\obj\Release\LogBook.dll
+C:\LogBook\LogBook\LogBook\obj\Release\LogBook.pdb
+C:\LogBook\LogBook\LogBook\bin\LogBook.dll
+C:\LogBook\LogBook\LogBook\bin\LogBook.pdb
+C:\LogBook\LogBook\LogBook\bin\ajaxcontroltoolkit.dll
+C:\LogBook\LogBook\LogBook\bin\LogBook.Business.exe
+C:\LogBook\LogBook\LogBook\bin\LogBook.DAL.exe
+C:\LogBook\LogBook\LogBook\bin\LogBook.Business.pdb
+C:\LogBook\LogBook\LogBook\bin\LogBook.DAL.pdb
+C:\Users\MediQlogix Solutions\Downloads\LogBook\LogBook\LogBook\obj\Release\ResolveAssemblyReference.cache
+C:\Users\MediQlogix Solutions\Downloads\LogBook\LogBook\LogBook\obj\Release\LogBook.dll
+C:\Users\MediQlogix Solutions\Downloads\LogBook\LogBook\LogBook\obj\Release\LogBook.pdb
+C:\Users\MediQlogix Solutions\Downloads\LogBook\LogBook\LogBook\bin\LogBook.dll
+C:\Users\MediQlogix Solutions\Downloads\LogBook\LogBook\LogBook\bin\LogBook.pdb
+C:\Users\MediQlogix Solutions\Downloads\LogBook\LogBook\LogBook\bin\LogBook.Business.exe
+C:\Users\MediQlogix Solutions\Downloads\LogBook\LogBook\LogBook\bin\LogBook.DAL.exe
+C:\Users\MediQlogix Solutions\Downloads\LogBook\LogBook\LogBook\bin\LogBook.Business.pdb
+C:\Users\MediQlogix Solutions\Downloads\LogBook\LogBook\LogBook\bin\LogBook.DAL.pdb

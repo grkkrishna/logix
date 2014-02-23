@@ -1,0 +1,6 @@
+C:\LogBook\LogBook\LogBook\bin\LogBook.dll
+C:\LogBook\LogBook\LogBook\bin\LogBook.pdb
+C:\LogBook\LogBook\LogBook\obj\Release\ResolveAssemblyReference.cache
+C:\LogBook\LogBook\LogBook\obj\Release\LogBook.dll
+C:\LogBook\LogBook\LogBook\obj\Release\LogBook.pdb
+C:\LogBook\LogBook\LogBook\bin\ajaxcontroltoolkit.dll
