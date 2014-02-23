@@ -1,0 +1,21 @@
+C:\LogBook\LogBook\LogBook.Business\bin\Debug\LogBook.Business.exe
+C:\LogBook\LogBook\LogBook.Business\bin\Debug\LogBook.Business.pdb
+C:\LogBook\LogBook\LogBook.Business\bin\Debug\LogBook.DAL.exe
+C:\LogBook\LogBook\LogBook.Business\bin\Debug\LogBook.DAL.pdb
+C:\LogBook\LogBook\LogBook.Business\obj\Debug\ResolveAssemblyReference.cache
+C:\LogBook\LogBook\LogBook.Business\obj\Debug\LogBook.Business.exe
+C:\LogBook\LogBook\LogBook.Business\obj\Debug\LogBook.Business.pdb
+C:\kiran\projects\LogBook\LogBook.Business\bin\Debug\LogBook.Business.exe
+C:\kiran\projects\LogBook\LogBook.Business\bin\Debug\LogBook.Business.pdb
+C:\kiran\projects\LogBook\LogBook.Business\bin\Debug\LogBook.DAL.exe
+C:\kiran\projects\LogBook\LogBook.Business\bin\Debug\LogBook.DAL.pdb
+C:\kiran\projects\LogBook\LogBook.Business\obj\Debug\ResolveAssemblyReference.cache
+C:\kiran\projects\LogBook\LogBook.Business\obj\Debug\LogBook.Business.exe
+C:\kiran\projects\LogBook\LogBook.Business\obj\Debug\LogBook.Business.pdb
+C:\Users\MediQlogix Solutions\Downloads\LogBook\LogBook\LogBook.Business\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\MediQlogix Solutions\Downloads\LogBook\LogBook\LogBook.Business\obj\Debug\LogBook.Business.exe
+C:\Users\MediQlogix Solutions\Downloads\LogBook\LogBook\LogBook.Business\bin\Debug\LogBook.Business.exe
+C:\Users\MediQlogix Solutions\Downloads\LogBook\LogBook\LogBook.Business\bin\Debug\LogBook.Business.pdb
+C:\Users\MediQlogix Solutions\Downloads\LogBook\LogBook\LogBook.Business\bin\Debug\LogBook.DAL.exe
+C:\Users\MediQlogix Solutions\Downloads\LogBook\LogBook\LogBook.Business\bin\Debug\LogBook.DAL.pdb
+C:\Users\MediQlogix Solutions\Downloads\LogBook\LogBook\LogBook.Business\obj\Debug\LogBook.Business.pdb
