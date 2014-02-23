@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="Logbook" Class="LogBookDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.\sqlexpress;Initial Catalog=Logbook;Integrated Security=True" SettingsObjectName="LogBook.DAL.Properties.Settings" SettingsPropertyName="LogbookConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tbl_logbook_instrument_master" Member="tbl_logbook_instrument_masters">
+    <Type Name="tbl_logbook_instrument_master">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="deptid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="createdby" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="createddate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="updatedby" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="updateddate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Association Name="tbl_logbook_instrument_master_tbl_logbook_machine" Member="tbl_logbook_machines" ThisKey="id" OtherKey="machine_id" Type="tbl_logbook_machine" />
+      <Association Name="tbl_logbook_instrument_master_tbl_logbook_centrifuge" Member="tbl_logbook_centrifuges" ThisKey="id" OtherKey="machine_id" Type="tbl_logbook_centrifuge" />
+      <Association Name="tbl_logbook_department_master_tbl_logbook_instrument_master" Member="tbl_logbook_department_master" ThisKey="deptid" OtherKey="id" Type="tbl_logbook_department_master" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_logbook_department_master" Member="tbl_logbook_department_masters">
+    <Type Name="tbl_logbook_department_master">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="createdby" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="createddate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="updatedby" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="updateddate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Association Name="tbl_logbook_department_master_tbl_logbook_instrument_master" Member="tbl_logbook_instrument_masters" ThisKey="id" OtherKey="deptid" Type="tbl_logbook_instrument_master" />
+      <Association Name="tbl_logbook_department_master_tbl_logbook_user_master" Member="tbl_logbook_user_masters" ThisKey="id" OtherKey="deptid" Type="tbl_logbook_user_master" />
+      <Association Name="tbl_logbook_department_master_tbl_logbook_machine" Member="tbl_logbook_machines" ThisKey="id" OtherKey="department_id" Type="tbl_logbook_machine" />
+      <Association Name="tbl_logbook_department_master_tbl_logbook_centrifuge" Member="tbl_logbook_centrifuges" ThisKey="id" OtherKey="department_id" Type="tbl_logbook_centrifuge" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_logbook_user_master" Member="tbl_logbook_user_masters">
+    <Type Name="tbl_logbook_user_master">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="username" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="password" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="deptid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="usertype" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="createdby" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="createddate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="updatedby" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="updateddate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="tbl_logbook_department_master_tbl_logbook_user_master" Member="tbl_logbook_department_master" ThisKey="deptid" OtherKey="id" Type="tbl_logbook_department_master" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_logbook_machine" Member="tbl_logbook_machines">
+    <Type Name="tbl_logbook_machine">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="department_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="machine_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="testdate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="analysis_starttime" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="analysis_endtime" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="sid" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="analysisby" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="verified_by" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="remarks" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="addeddate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="verifieddate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="tbl_logbook_department_master_tbl_logbook_machine" Member="tbl_logbook_department_master" ThisKey="department_id" OtherKey="id" Type="tbl_logbook_department_master" IsForeignKey="true" />
+      <Association Name="tbl_logbook_instrument_master_tbl_logbook_machine" Member="tbl_logbook_instrument_master" ThisKey="machine_id" OtherKey="id" Type="tbl_logbook_instrument_master" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_logbook_centrifuge" Member="tbl_logbook_centrifuges">
+    <Type Name="tbl_logbook_centrifuge">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="department_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="machine_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="testdate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="analysis_starttime" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="analysis_endtime" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="sid" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="rpm" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="sampletype" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="analysisby" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="verified_by" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="remarks" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="addeddate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="verifieddate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="tbl_logbook_department_master_tbl_logbook_centrifuge" Member="tbl_logbook_department_master" ThisKey="department_id" OtherKey="id" Type="tbl_logbook_department_master" IsForeignKey="true" />
+      <Association Name="tbl_logbook_instrument_master_tbl_logbook_centrifuge" Member="tbl_logbook_instrument_master" ThisKey="machine_id" OtherKey="id" Type="tbl_logbook_instrument_master" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,12 @@
+C:\LogBook\LogBook\LogBook.DAL\bin\Debug\LogBook.DAL.exe.config
+C:\LogBook\LogBook\LogBook.DAL\bin\Debug\LogBook.DAL.exe
+C:\LogBook\LogBook\LogBook.DAL\bin\Debug\LogBook.DAL.pdb
+C:\LogBook\LogBook\LogBook.DAL\obj\Debug\ResolveAssemblyReference.cache
+C:\LogBook\LogBook\LogBook.DAL\obj\Debug\LogBook.DAL.exe
+C:\LogBook\LogBook\LogBook.DAL\obj\Debug\LogBook.DAL.pdb
+C:\kiran\projects\LogBook\LogBook.DAL\bin\Debug\LogBook.DAL.exe.config
+C:\kiran\projects\LogBook\LogBook.DAL\bin\Debug\LogBook.DAL.exe
+C:\kiran\projects\LogBook\LogBook.DAL\bin\Debug\LogBook.DAL.pdb
+C:\kiran\projects\LogBook\LogBook.DAL\obj\Debug\ResolveAssemblyReference.cache
+C:\kiran\projects\LogBook\LogBook.DAL\obj\Debug\LogBook.DAL.exe
+C:\kiran\projects\LogBook\LogBook.DAL\obj\Debug\LogBook.DAL.pdb
