@@ -26,3 +26,12 @@ C:\Users\MediQlogix Solutions\Downloads\LogBook\LogBook\LogBook\bin\LogBook.DAL.
 C:\Users\MediQlogix Solutions\Downloads\LogBook\LogBook\LogBook\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\MediQlogix Solutions\Downloads\LogBook\LogBook\LogBook\obj\Debug\LogBook.dll
 C:\Users\MediQlogix Solutions\Downloads\LogBook\LogBook\LogBook\obj\Debug\LogBook.pdb
+C:\Users\MediQlogix Solutions\Desktop\rep\trunk\MedLog\LogBook\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\MediQlogix Solutions\Desktop\rep\trunk\MedLog\LogBook\obj\Debug\LogBook.dll
+C:\Users\MediQlogix Solutions\Desktop\rep\trunk\MedLog\LogBook\bin\LogBook.dll
+C:\Users\MediQlogix Solutions\Desktop\rep\trunk\MedLog\LogBook\bin\LogBook.pdb
+C:\Users\MediQlogix Solutions\Desktop\rep\trunk\MedLog\LogBook\bin\LogBook.Business.exe
+C:\Users\MediQlogix Solutions\Desktop\rep\trunk\MedLog\LogBook\bin\LogBook.DAL.exe
+C:\Users\MediQlogix Solutions\Desktop\rep\trunk\MedLog\LogBook\bin\LogBook.Business.pdb
+C:\Users\MediQlogix Solutions\Desktop\rep\trunk\MedLog\LogBook\bin\LogBook.DAL.pdb
+C:\Users\MediQlogix Solutions\Desktop\rep\trunk\MedLog\LogBook\obj\Debug\LogBook.pdb

@@ -51,7 +51,7 @@ namespace LogBook.UI
             try
             {
 
-                if (ddlDepartment.SelectedIndex >0 && ddlMachines.SelectedIndex >0)
+                if (ddlDept.SelectedIndex >0 && ddlInstru.SelectedIndex >0)
                 {
                     //if (ViewState["editId"] != null)
                     //{
@@ -271,16 +271,28 @@ namespace LogBook.UI
 
         protected void txtBarcode_TextChanged(object sender, EventArgs e)
         {
-            if (txtBarcode.Text != string.Empty)
+            if (txtBarcode.Text != string.Empty && ddlDept.SelectedIndex >0 &&  ddlInstru.SelectedIndex > 0 && ddlsampletype.SelectedIndex>0)
             {
                 string strTime = txtAnalysisTime.Text.Trim();
                 if (strTime == string.Empty)
-                    txtAnalysisTime.Text = DateTime.Now.ToShortTimeString() + ",";
-                else
+                    txtAnalysisTime.Text = DateTime.Now.ToShortTimeString();
+                
+                if(ddlsampletype.SelectedValue == "1")
                 {
-                    strTime = strTime +  DateTime.Now.ToShortTimeString() + ",";
-                    txtAnalysisTime.Text = strTime;
+                    txtRpm.Text ="1000-2000";
+                    txtendtime.Text = DateTime.Now.AddMinutes(10).ToShortTimeString();
                 }
+                else if(ddlsampletype.SelectedValue == "2")
+                {
+                    txtRpm.Text ="1000-2000";
+                    txtendtime.Text = DateTime.Now.AddMinutes(15).ToShortTimeString();
+                }
+                else if(ddlsampletype.SelectedValue == "3")
+                {
+                    txtRpm.Text ="1500-2000";
+                    txtendtime.Text = DateTime.Now.AddMinutes(5).ToShortTimeString();
+                }
+
 
                 string strSid = txtSids.Text.Trim();
                 if (strSid == string.Empty)
@@ -290,6 +302,10 @@ namespace LogBook.UI
                     strSid = strSid +  txtBarcode.Text + ",";
                     txtSids.Text = strSid;
                 }
+            }
+            else
+            {
+                lblMsg.Text = " Please select Dept/Inst/Sample Type";
             }
             txtBarcode.Text = string.Empty;
             
@@ -313,6 +329,11 @@ namespace LogBook.UI
         {
             VerifiedBy();
             LoadGrid();
+        }
+
+        protected void ddlsampletype_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
         }
     }
 }

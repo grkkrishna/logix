@@ -12,34 +12,41 @@
        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
       <Triggers>
       <asp:PostBackTrigger ControlID="btnVerify" />
-      <asp:PostBackTrigger ControlID="txtBarcode" />
+     <%-- <asp:PostBackTrigger ControlID="txtBarcode" />--%>
       </Triggers>
        <ContentTemplate>
-       
+           <asp:Panel ID="pnlTitle" runat="server" BackColor="Aqua"  Height="35px"
+               Width="100%" >
+           <table >
+           <tr>
+           <td>
+           <asp:TextBox ID="txtBarcode" runat="server" AutoPostBack="True" 
+                   Height="22px" ontextchanged="txtBarcode_TextChanged" Width="450px"></asp:TextBox>
+           </td>
+           </tr>
+           </table>
               
-        <div id ="pnlPop" runat="server"  class="modalPopup"  
-               
-               
-               style=" border: 3px solid #5983BE; display:block; width:650px;  padding:5px 5px 5px 5px;">
-          
-            <table class="style1">
+           </asp:Panel>
+           <asp:Panel ID="pnlContent" runat="server" CssClass="collapsePanel">
+                   <table class="style1">
                 <tr bgcolor="#E8F3FF">
                     <td colspan="2">
                         <b>LogBook</b></td>
                     <td>
-                        <asp:ImageButton ID="ImageButton1" runat="server" 
-                            ImageUrl="~/images/icons/Close.gif" CommandArgument="1" 
-                            CommandName="close" onclick="ImageButton1_Click" />
+                       
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <asp:Label ID="Label2222" runat="server" Font-Size="12px" Text="Scan Barcode"></asp:Label>
+                        <asp:Label ID="Label2222" runat="server" Font-Size="12px" Text="Department"></asp:Label>
                     </td>
                     <td>
-                        <asp:TextBox ID="txtBarcode" runat="server" AutoPostBack="True" 
-                            ontextchanged="txtBarcode_TextChanged" Width="480px" CssClass="txtBox" 
-                            ForeColor="White"></asp:TextBox>
+                        <asp:DropDownList ID="ddlDepartment0" runat="server" AutoPostBack="True" 
+                            CssClass="ddl" onselectedindexchanged="ddlDepartment_SelectedIndexChanged" 
+                            Width="150px">
+                        </asp:DropDownList>
+                        <asp:DropDownList ID="ddlMachines0" runat="server" CssClass="ddl" Width="150px">
+                        </asp:DropDownList>
                     </td>
                     <td>
                         &nbsp;</td>
@@ -47,6 +54,8 @@
                  <tr>
                      <td>
                          <asp:Label ID="Label3" runat="server" Font-Size="12px" Text="Analysis Date"></asp:Label>
+                         <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" 
+                             ControlToValidate="txtAnaDate" ErrorMessage="*" ValidationGroup="save"></asp:RequiredFieldValidator>
                      </td>
                      <td>
                          <asp:TextBox ID="txtAnaDate" runat="server" Height="22px" Width="100px" 
@@ -56,22 +65,20 @@
                          </asp:CalendarExtender>
                      </td>
                      <td>
-                         <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" 
-                             ControlToValidate="txtAnaDate" ErrorMessage="*" ValidationGroup="save"></asp:RequiredFieldValidator>
-                     </td>
+                         &nbsp;</td>
                 </tr>
                  <tr>
                     <td >
                         <asp:Label ID="Label1" runat="server" Font-Size="12px" Text="SIDS"></asp:Label>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" 
+                            ControlToValidate="txtSids" ErrorMessage="*" ValidationGroup="save"></asp:RequiredFieldValidator>
                     </td>
                     <td >
                         <asp:TextBox ID="txtSids" runat="server" Height="54px" Rows="5" 
-                            TextMode="MultiLine" Width="480px"></asp:TextBox>
+                            TextMode="MultiLine" Width="480px" Enabled="False"></asp:TextBox>
                     </td>
                     <td >
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" 
-                            ControlToValidate="txtSids" ErrorMessage="*" ValidationGroup="save"></asp:RequiredFieldValidator>
-                     </td>
+                        &nbsp;</td>
                      <td>
                          &nbsp;</td>
                 </tr>
@@ -80,22 +87,22 @@
                     <td>
                         
                     
-                        <asp:TextBox ID="txtAnalysisTime" runat="server" Height="59px" 
-                             Rows="5" TextMode="MultiLine" 
-                            Width="480px"></asp:TextBox>
+                        <asp:Label ID="Label4" runat="server" Font-Size="12px" Text="Analysis Time"></asp:Label>
+                        
+                    
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" 
+                            ControlToValidate="txtAnalysisTime" ErrorMessage="*" ValidationGroup="save"></asp:RequiredFieldValidator>
                         
                     
                     </td>
                     
                     <td>
-                        <asp:Label ID="Label4" Font-Size="12px"  runat="server" Text="Analysis Time"></asp:Label>
+                        <asp:TextBox ID="txtAnalysisTime" runat="server" Height="59px" Rows="5" 
+                            TextMode="MultiLine" Width="480px" Enabled="False"></asp:TextBox>
                     </td>
                     
                     <td>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" 
-                            ControlToValidate="txtAnalysisTime" ErrorMessage="*" 
-                            ValidationGroup="save"></asp:RequiredFieldValidator>
-                    </td>
+                        &nbsp;</td>
                 </tr>
 
 
@@ -137,13 +144,19 @@
                         &nbsp;</td>
                 </tr>
             </table>
+           </asp:Panel>
+           <asp:CollapsiblePanelExtender ID="CPE1" runat="server" TargetControlID="pnlContent"
+               ExpandControlID="pnlTitle" CollapseControlID="pnlTitle" TextLabelID="lblTitle" AutoExpand="false" AutoCollapse="false"
+               CollapsedText="Expnd" ExpandedText="Close" ImageControlID="pnlImage" ExpandedImage="~/images/collapse.jpg"
+               CollapsedImage="~/images/expand.jpg" Collapsed="false" SuppressPostBack="false"
+               ExpandDirection="Vertical">
+               </asp:CollapsiblePanelExtender>
+           
+         
+          
             
-            
-       </div>
+   
 
-    <asp:ModalPopupExtender ID="mpEx" runat="server" BackgroundCssClass="modalBackground" DropShadow="true" 
-    CancelControlID="HyperLink2" TargetControlID="HyperLink1" PopupControlID="pnlPop" >
-    </asp:ModalPopupExtender>
           
     
            <table class="style1">

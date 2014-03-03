@@ -21,13 +21,17 @@ namespace LogBook.UI
                 txtFdate.Text = DateTime.Now.ToString("MM/dd/yyyy");
                 txtTdate.Text = DateTime.Now.ToString("MM/dd/yyyy");
                 txtAnaDate.Text = DateTime.Now.ToString("MM/dd/yyyy");
-
+               
                 loadDropDown();
                 LoadGrid();
-               
-               
+                if (objLog.GetLoginUserType(Page.User.Identity.Name) > 1)
+                {
+                    gvMachineLog.Columns[5].Visible = false;
+                    gvMachineLog.Columns[6].Visible = false;
+                }
             }
             //txtBarcode.Focus();
+            txtBarcode.Focus();
             
         }
         private void LoadGrid()
@@ -63,8 +67,8 @@ namespace LogBook.UI
                 //    obj = objLog.GetDepartment(Convert.ToInt32(ViewState["editId"]));
                 //    str = ViewState["editId"].ToString();
                 //}
-                obj.department_id = Convert.ToInt32(ddlDepartment.SelectedValue);
-                obj.machine_id = Convert.ToInt32(ddlMachines.SelectedValue);
+                obj.department_id = Convert.ToInt32(ddlDepartment0.SelectedValue);
+                obj.machine_id = Convert.ToInt32(ddlMachines0.SelectedValue);
                 obj.testdate = Convert.ToDateTime(txtAnaDate.Text);
                 obj.analysis_starttime = txtAnalysisTime.Text;
                 obj.sid = txtSids.Text;
@@ -77,7 +81,7 @@ namespace LogBook.UI
             catch (Exception ex)
             {
                 lblMsg.Text = ex.Message +  "Error while saving";
-                mpEx.Show();
+               // mpEx.Show();
             }
             finally
             {
@@ -93,7 +97,10 @@ namespace LogBook.UI
             objUtl.FillCombo(ddlDepartment,"Department");
             objUtl.FillCombo(ddlMachines, "Machine");
 
-            objUtl.FillCombo(, "Department");
+            objUtl.FillCombo(ddlDepartment0, "Department");
+            objUtl.FillCombo(ddlMachines0, "Machine");
+
+           // objUtl.FillCombo(d, "Department");
             objUtl.FillCombo(ddlMachines, "Machine");
 
 
@@ -273,9 +280,11 @@ namespace LogBook.UI
                     txtSids.Text = strSid;
                 }
             }
+        
             txtBarcode.Text = string.Empty;
             txtBarcode.Focus();
-            mpEx.Show();
+            CPE1.Collapsed = true;
+            CPE1.ClientState = "true";//mpEx.Show();
         }
 
 

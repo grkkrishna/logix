@@ -61,7 +61,8 @@
                                  </td>
                                  <td>
                                      <asp:DropDownList ID="ddlsampletype" runat="server" CssClass="ddl" 
-                                         Width="200px">
+                                         Width="200px" onselectedindexchanged="ddlsampletype_SelectedIndexChanged">
+                                         <asp:ListItem Value="0">-select sample-</asp:ListItem>
                                          <asp:ListItem Value="1">serum</asp:ListItem>
                                      </asp:DropDownList>
                                  </td>

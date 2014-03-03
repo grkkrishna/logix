@@ -208,6 +208,9 @@
     <Content Include="bin\LogBook.pdb" />
     <Content Include="Centrifuge_Log.aspx" />
     <Content Include="home.aspx" />
+    <Content Include="images\collapse.jpg" />
+    <Content Include="images\expand.jpg" />
+    <Content Include="images\loader.gif" />
     <Content Include="login.aspx" />
     <Content Include="Machine_Log.aspx" />
     <Content Include="Department_Master.aspx" />

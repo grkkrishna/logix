@@ -48,5 +48,10 @@ namespace LogBook.Business
 
             return isVer;
         }
+
+        public int GetLoginUserType(string p)
+        {
+            return dt.tbl_logbook_user_masters.Where(e => e.username == p).SingleOrDefault().usertype;
+        }
     }
 }
